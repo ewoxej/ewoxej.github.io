@@ -1,109 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>We are kokos</title>
+<title>MySite</title>
 <link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.fig{
-text-align:left;
-color: #4FD155;
-font-family: Helvetica;
-font-weight: bold;
-font-size: 28pt;
-background-color: #333;
-padding: 1%;
-margin-block-start: 0;
-margin-block-end: 0;
-}
-img {
-width:150pt;
-height:150pt;
-}
-@media only screen and (max-width: 600px) {
-.fig {
-text-align: center;
-padding:0;
-}
-img {
-width: 50%;
-height:50%;
-}
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a.fixed{
-pointer-events: none;
-color: #4FD155;
-font-size: 18px;
-font-family: Arial;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4FD155;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-@media only screen and (min-width: 600px){
-.column {
-  float: left;
-  width: 50%;
-  padding: 0px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
- padding: 0px;
-}
-}
-.sticky + .content {
-  padding-top: 60px;
-}
-</style>
 </head>
 <body>
 
 <div id="navbar">
-<a class="fixed" href="javascript:void(0)">KOKOS</a>
+<a class="fixed" href="javascript:void(0)">@ewoxej</a>
   <a href="#hhome">Home</a>
-  <a href="#hgallery">Gallery</a>
-  <a href="#habout">About us</a>
+  <a href="#hgallery">My works</a>
+  <a href="#habout">About</a>
 </div>
 
 <div class="content">
@@ -117,41 +26,24 @@ font-family: Arial;
 <img src = "splash.png" onclick="changeColor()">
 </p>
 </div>
-<p class="fig" style="height:150pt">Traffic light<br>On a green background<br>So i went<br>On a seagull</p>
+<p class="fig" style="height:150pt">Just press<br>And turn night mode<br>Simple and useful</p>
 </div>
 <div class="content">
-<p>Our amazing team called "kokos" because we are complex oscillatory circuit.<br> Pizza is our power supply. <br>Kokos consist from three parts.</p>
-<p>We are really inspired by some of these videos.</p>
-<p>So, i hope, we will inspired too.</p>
+<p>It is simple site for keep my labaratory works and for showing site features. Anyway, nobody read this text and i can paste a piece of useless information</p>
 <div id="hgallery"></div>
 <br>
 <h2>Gallery</h2>
-<p>Here we can found a few examples of video and pictures, which one way of another, related to us</p>
-<h5>Olga Mukhina</h5>
-<p>There are pretty simple example of YouTube video content integration</p>
-<iframe 
-src="https://youtube.com/embed/8329O644jmc">
-</iframe>
-<h5>Naina</h5>
-<iframe 
-src="https://www.youtube.com/embed/tWzVu27loKo">
-</iframe>
-<h5>Наталья Морская Пехота</h5>
-<iframe 
-src="https://www.youtube.com/embed/pWJOxvcp7xk">
-</iframe>
+<p>Here we can found a few examples of works, which one way of another, related to me</p>
+<a href="lb1/lb1.html">Lab1</a>
+<a href="lab1.html">Lab2</a>
+<a href="lab1.html">Lab3</a>
+<a href="lab1.html">Lab4</a>
+<a href="lab1.html">Idz</a>
 <div id="habout"></div>
 <br>
 <h2>About</h2>
-<p>Here are contacts for contact us:</p>
-<h5>Ritka</h5>
-<p>UI/UX Designer</p>
-  <a href="http://t.me/vetrokot">@vetrokot</a>
-<h5>Skaldson</h5>
-<p>Frontend developer</p>
-  <a href="http://t.me/skaldson">@skaldson</a>
-<h5>Me</h5>
-<p>Backend developer</p>
+<p>Here are contacts for contact me:</p>
+<h5>Telegram</h5>
   <a href="http://t.me/ewoxej">@ewoxej</a>
   <br>
   <br>
@@ -161,6 +53,7 @@ src="https://www.youtube.com/embed/pWJOxvcp7xk">
 <script>
 window.onscroll = function() {myFunction()};
 var back = 'white';
+var text = 'black';
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
@@ -175,11 +68,14 @@ function myFunction() {
 function changeColor() {
 if(back == 'white')
 {
-back='green';
+back='#333';
+text='white';
 }
 else{
 back='white';
+text='black';
 }
+document.body.style.color=text;
 document.body.style.background=back;
 }
 </script>
