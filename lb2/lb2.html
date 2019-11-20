@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Laba 2, variant 7</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.block1
+{
+position:relative;
+width:50%;
+top:250px;
+left:10px;
+background:#beef;
+border: 4px solid black;
+font-style: italic;
+}
+</style>
+</head>
+<body>
+<h1>Laba 2. Таблицы стилей css и все такое</h1>
+<div class="block1">Задание к лабе выглядит так:<br>
+1.Создать простой HTML-документ с произвольным содержимым, как минимум, содержащий блочные элементы (они понадобятся для демонстрации стилей).<br>
+2.Показать в созданном документе три способа использования каскадных таблиц стилей:<br>
+inline-описание (используется атрибут style);<br>
+с помощью контейнера style в секции заголовка;<br>
+подключить стилевую таблицу, расположенную во внешнем файле;<br>
+3.Используя селекторы CLASS и ID, показать использование стилей (например, для форматирование шрифта, текста, изменения фона документа и т.д.)<br>
+4.Показать использование абсолютного и относительного позиционирования.<br>
+5.Показать использование плавающей модели (свойство float).<br>
+6.Добавить в документ элементы согласно варианту.<br>
+</div>
+<div class="block2" style="background:#ecf;position:absolute;top:80px;left:10px">А вариант выглядит так: <br>
+Добавить на страницу элемент, сдержащий переключаемые вкладки. Пример на рисунке.
+<img src="tabs.png" alt="задание к лабе" style="float:left">
+<br>Кстати, для этого блока используется inline описание стилей и абсолютное позиционирование
+</div> 
+<div class="block3" style="position:absolute;top:600px;left:20px;float:left">
+    <input type="radio" id="tab1" name="tabs" checked="checked"/>
+    <label for="tab1">Tab1</label>
+    <input type="radio" id="tab2" name="tabs"/>
+    <label for="tab2">Tab2</label>
+	<input type="radio" id="tab3" name="tabs"/>
+    <label for="tab3">Tab3</label>
+    <article><b>Header tab1</b> <br><br>Lorem ipsum<br />Text for Tab1. </article>
+    <article>Text for Tab2.<br />Text for Tab2.</article>
+	<article>Третья вкладка<br />Здесь ничего интересного</article>
+</div>
+</body>
+</html>
