@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+function randomInteger( min, max )
+{
+	var scale = max - min;
+	var value = Math.floor( Math.random() * scale);
+	return value + Number( min );
+}
+
+function creTable( minBound, maxBound ) 
+{
+    var body = document.getElementsByTagName( "body" )[0];
+    var table = document.createElement( "table" );
+	table.style.border = "1px solid black";
+    var tableBody = document.createElement( "tbody" );
+	for( i=0; i<10; i++ ) 
+	{
+		var row = document.createElement( "tr" );
+		for( j=0; j<10; j++ ) 
+		{
+			var cell = document.createElement( "td" ); 
+			if( (i%2==0 && j%2==0) || i%2==1 && j%2==1 )
+				{ 
+				cell.style.backgroundColor = "black";	
+				cell.style.color = "white";	
+				}
+			var cellText = document.createTextNode(randomInteger(minBound,maxBound));
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+		}
+		tableBody.appendChild(row);
+	}
+	table.appendChild(tableBody);
+    body.appendChild(table);
+}
+
+function buttonHandler(){
+	var a = document.getElementById( "numMin" ).value;
+	var b = document.getElementById( "numMax" ).value;
+	creTable(a,b);
+}
+</script>
+</head>
+<body>
+   <p>Choose number range:</p>
+   <p><input type="number" id="numMin" value="0"></p>
+   <p><input type="number" id="numMax" value="100"></p>
+   <p><input type="button" onclick="buttonHandler()" value="Create" />
+</body>
+</html>
+ 
