@@ -1,0 +1,15 @@
+  table
+  {
+  position: absolute;
+  left: 40%;
+  }
+  td
+  {
+	  text-align: center;
+	  font-family: "Lucida Console",monospace;
+	  font-size: 200%;
+  }
+  #game_field
+  {
+	  display: none;
+  }
