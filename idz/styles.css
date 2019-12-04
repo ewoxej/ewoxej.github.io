@@ -4,6 +4,15 @@
 	  font-family: "Lucida Console",monospace;
 	  font-size: 200%;
   }
+  #initial_dialog
+  {
+	position: absolute;
+    left: 30%;
+	width:40%;
+	text-align: center;
+	border: 1px solid black;
+  }
+  
   #game_field
   {
 	position: absolute;

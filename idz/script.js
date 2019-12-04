@@ -4,6 +4,7 @@ var xWins=0;
 var oWins=0;
 var isWin=false;
 var isPC=false;
+var moveQueue = 'O';
 
 function clickHandler(el)
 {
@@ -12,12 +13,29 @@ function clickHandler(el)
 	winChecker(el.cellIndex +(el.parentNode.rowIndex*3));
 	if(isWin==false)
 	{
+		if(isPC==true)
+		{
 		pcStep();
+		}
+		else
+		{
+			setMoveText();
+			if(userSymbol=='X') userSymbol='O';
+			else userSymbol='X';
+		}
 	}
 	else
 	{
 		isWin=false;
 	}
+}
+
+function setMoveText()
+{
+	var moveLabel=document.getElementById("move_label");
+	moveLabel.innerHTML = "move of " + moveQueue;
+	if(moveQueue=='X') moveQueue='O';
+	else moveQueue = 'X';
 }
 
 function formHandler()
@@ -28,10 +46,12 @@ function formHandler()
 		userSymbol='O';
 		pcSymbol='X';
 	}
-	isPC = document.getElementById("playerPC");
+	isPC = document.getElementById("playerPC").checked;
 	var field = document.getElementById("game_field");
 	field.style.display="block";
 	var dlg = document.getElementById("initial_dialog");
+	var moveLabel=document.getElementById("move_label");
+	moveLabel.innerHTML = "move of " + userSymbol;
 	dlg.style.display="none";
 }
 function winChecker(index)
@@ -54,10 +74,15 @@ for(var i=0;i<combinations.length;i++)
 			var counter = document.getElementById("count");
 			counter.innerHTML=String(xWins)+":"+String(oWins);
 			isWin=true;
-			break;
+			return;
 		}
 	}
 }
+for(i in cells)
+	if(i.innerHTML!='X' || i.innerHTML!='O')
+		return;
+	alert("Ничья");
+cleanField();	
 }
 
 function cleanField()
