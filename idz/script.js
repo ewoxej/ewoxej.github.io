@@ -1,11 +1,23 @@
 var userSymbol ='X';
 var pcSymbol ='O';
+var xWins=0;
+var oWins=0;
+var isWin=false;
 var isPC=false;
+
 function clickHandler(el)
 {
 	el.innerHTML=userSymbol;
-	winChecker(Array.from(el.parentNode.children).indexOf(el));
-	pcStep();
+	var cells = document.getElementsByTagName("td");
+	winChecker(el.cellIndex +(el.parentNode.rowIndex*3));
+	if(isWin==false)
+	{
+		pcStep();
+	}
+	else
+	{
+		isWin=false;
+	}
 }
 
 function formHandler()
@@ -25,6 +37,7 @@ function formHandler()
 function winChecker(index)
 {
 var combinations=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+var cells = document.getElementsByTagName("td");
 for(var i=0;i<combinations.length;i++)
 {
 	var currentSymbol = document.getElementsByTagName("td")[index].innerHTML;
@@ -32,12 +45,27 @@ for(var i=0;i<combinations.length;i++)
 	if(isIndexInList != -1)
 	{
 		var arr = combinations[i];
-		if(arr[0].innerHTML == currentSymbol && arr[1].innerHTML == currentSymbol && arr[2].innerHTML == currentSymbol)
+		if(cells[arr[0]].innerHTML == currentSymbol && cells[arr[1]].innerHTML == currentSymbol && cells[arr[2]].innerHTML == currentSymbol)
 		{
-			alert(currentSymbol+" win");
+			alert(currentSymbol+" has win");
+			if(currentSymbol=='X') xWins++;
+			if(currentSymbol=='O') oWins++;
+			cleanField();
+			var counter = document.getElementById("count");
+			counter.innerHTML=String(xWins)+":"+String(oWins);
+			isWin=true;
+			break;
 		}
 	}
 }
+}
+
+function cleanField()
+{
+	var cells = document.getElementsByTagName("td");
+	for (var i = 0; i < cells.length; i++) {
+		cells[i].innerHTML="&emsp;"
+	}
 }
 function pcStep()
 {
@@ -46,7 +74,9 @@ function pcStep()
 		if(cells[i].innerHTML!=userSymbol && cells[i].innerHTML!=pcSymbol)
 		{
 		cells[i].innerHTML=pcSymbol;
+		winChecker(i);
 		break;
 		}
+	
 }
 }
