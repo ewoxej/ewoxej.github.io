@@ -3,6 +3,12 @@
 	  text-align: center;
 	  font-family: "Lucida Console",monospace;
 	  font-size: 200%;
+	  width:50;
+	  height:50;
+  }
+  table
+  {
+	  table-layout:fixed;
   }
   #initial_dialog
   {
