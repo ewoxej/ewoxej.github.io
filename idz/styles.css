@@ -12,7 +12,15 @@
 	text-align: center;
 	border: 1px solid black;
   }
-  
+  #move_label
+  {
+	  text-align:center;
+	  font-family:"Arial"
+  }
+  #count
+  {
+	  text-align:right;
+  }
   #game_field
   {
 	position: absolute;

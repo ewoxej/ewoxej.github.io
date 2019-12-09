@@ -19,9 +19,11 @@
     <input type="radio" id="playerHuman" name="player">
     <label for="playerHuman">Human</label>
   </div>
+  <br>
   <div>
-    <button onclick="formHandler()">Submit</button>
+    <button onclick="formHandler()">Play</button>
   </div>
+  <br>
 </div>
 <div id="game_field">
 <table>
@@ -31,8 +33,6 @@
 </th>
 <th>
 <div id="count">0:0</div>
-</th>
-<th id="move_label">
 </th>
 </tr>
 </table>
@@ -51,7 +51,7 @@
 <td onclick="clickHandler(this)">&emsp;</td>
 <td onclick="clickHandler(this)">&emsp;</td>
 <td onclick="clickHandler(this)">&emsp;</td>
-</tr>
 </table>
+<div id="move_label"></div>
 </div>
 </body>
