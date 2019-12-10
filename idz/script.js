@@ -1,10 +1,10 @@
-var userSymbol ='X';
-var pcSymbol ='O';
-var xWins=0;
-var oWins=0;
-var isWin=false;
-var isPC=false;
-var noGame=false;
+var userSymbol = 'X';
+var pcSymbol = 'O';
+var xWins = 0;
+var oWins = 0;
+var isWin = false;
+var isPC = false;
+var noGame = false;
 var moveQueue = 'O';
 
 function clickHandler(el)
@@ -78,7 +78,7 @@ function winChecker(index)
 			{
 				doPaint(cells,combinations[i]);
 				noGame = true;
-				document.getElementById( "move_label" ).innerHTML = currentSymbol + " has win";
+				document.getElementById( "move_label" ).innerHTML = currentSymbol + " has win. Click on the field to play again";
 				moveQueue=userSymbol;
 				if( currentSymbol == 'X' ) xWins++;
 				if( currentSymbol == 'O' ) oWins++;
@@ -100,7 +100,7 @@ function winChecker(index)
 }
 
 
-function doPaint(cells,combination)
+function doPaint( cells, combination )
 {
 	cells[combination[0]].style.backgroundColor = "red";
 	cells[combination[1]].style.backgroundColor = "red";

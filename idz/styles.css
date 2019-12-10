@@ -1,15 +1,17 @@
   td
   {
-	  text-align: center;
-	  font-family: "Lucida Console",monospace;
-	  font-size: 200%;
-	  width:50;
-	  height:50;
+	text-align: center;
+	font-family: "Lucida Console",monospace;
+	font-size: 200%;
+	width:50;
+	height:50;
   }
+  
   table
   {
-	  table-layout:fixed;
+	table-layout:fixed;
   }
+  
   #initial_dialog
   {
 	position: absolute;
@@ -18,15 +20,18 @@
 	text-align: center;
 	border: 1px solid black;
   }
+  
   #move_label
   {
-	  text-align:center;
-	  font-family:"Arial"
+	text-align:center;
+	font-family:"Arial"
   }
+  
   #count
   {
 	  text-align:right;
   }
+  
   #game_field
   {
 	position: absolute;

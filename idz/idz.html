@@ -1,57 +1,58 @@
 <head>
-<title>Tic Tac Toe</title>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
 </head>
 <body>
-<div id="initial_dialog">
-  <p>Please select your symbol:</p>
-  <div>
-    <input type="radio" id="symbolX" name="symbol" checked>
-    <label for="symbolX">X</label>
-    <input type="radio" id="symbolO" name="symbol">
-    <label for="symbolO">O</label>
-  </div>
-    <p>You will play with:</p>
-    <div>
-    <input type="radio" id="playerPC" name="player" checked>
-    <label for="playerPC">PC</label>
-    <input type="radio" id="playerHuman" name="player">
-    <label for="playerHuman">Human</label>
-  </div>
-  <br>
-  <div>
-    <button onclick="formHandler()">Play</button>
-  </div>
-  <br>
-</div>
-<div id="game_field">
-<table>
-<tr>
-<th>
-<button onclick="location.reload()">Reload</button>
-</th>
-<th>
-<div id="count">0:0</div>
-</th>
-</tr>
-</table>
-<table border="1">
-<tr>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-</tr>
-<tr>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-</tr>
-<tr>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-<td onclick="clickHandler(this)">&emsp;</td>
-</table>
-<div id="move_label"></div>
-</div>
+	<div id="initial_dialog">
+	  <p>Please select your symbol:</p>
+	  <div>
+		<input type="radio" id="symbolX" name="symbol" checked>
+		<label for="symbolX">X</label>
+		<input type="radio" id="symbolO" name="symbol">
+		<label for="symbolO">O</label>
+	  </div>
+		<p>You will play with:</p>
+		<div>
+		<input type="radio" id="playerPC" name="player" checked>
+		<label for="playerPC">PC</label>
+		<input type="radio" id="playerHuman" name="player">
+		<label for="playerHuman">Human</label>
+	  </div>
+	  <br>
+	  <div>
+		<button onclick="formHandler()">Play</button>
+	  </div>
+	  <br>
+	</div>
+	<div id="game_field">
+	<table>
+		<tr>
+			<th>
+				<button onclick="location.reload()">Reload</button>
+			</th>
+			<th>
+				<div id="count">0:0</div>
+			</th>
+		</tr>
+	</table>
+	<table border="1">
+		<tr>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+		</tr>
+		<tr>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+		</tr>
+		<tr>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+			<td onclick="clickHandler(this)">&emsp;</td>
+		</tr>
+	</table>
+	<div id="move_label"></div>
+	</div>
 </body>
