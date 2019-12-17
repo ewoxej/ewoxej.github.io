@@ -1,85 +1,67 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-<title>MySite</title>
-<link rel="icon" href="icon.png">
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<div id="navbar">
-<a class="fixed" href="javascript:void(0)">@ewoxej</a>
-  <a href="#hhome">Home</a>
-  <a href="#hgallery">My works</a>
-  <a href="#habout">About</a>
-</div>
-
-<div class="content">
-<div id="hhome"></div>
-<br>
-<h2>Home</h2>
-</div>
-<div class="row" style="padding:0">
-<div class="column">
-<p class="fig">
-<img src = "splash.png" onclick="changeColor()">
-</p>
-</div>
-<p class="fig" style="height:150pt">Just press<br>And turn night mode<br>Simple and useful</p>
-</div>
-<div class="content">
-<p>It is simple site for keep my labaratory works and for showing site features. Anyway, nobody read this text and i can paste a piece of useless information</p>
-<div id="hgallery"></div>
-<br>
-<h2>Gallery</h2>
-<p>Here we can found a few examples of works, which one way of another, related to me</p>
-<a href="pages/spz.html">Spz kursach</a>
-<a href="lb1/lb1.html">Lab1</a>
-<a href="lb2/lb2.html">Lab2</a>
-<a href="lb3/lb3.html">Lab3</a>
-<a href="lb4/lb4.html">Lab4</a>
-<a href="lab1.html">Idz</a>
-<div id="habout"></div>
-<br>
-<h2>About</h2>
-<p>Here are contacts for contact me:</p>
-<h5>Telegram</h5>
-  <a href="http://t.me/ewoxej">@ewoxej</a>
-  <br>
-  <br>
-<div>Site icon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a>
-</div>
-
-<script>
-window.onscroll = function() {myFunction()};
-var back = 'white';
-var text = 'black';
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
-function changeColor() {
-if(back == 'white')
-{
-back='#333';
-text='white';
-}
-else{
-back='white';
-text='black';
-}
-document.body.style.color=text;
-document.body.style.background=back;
-}
-</script>
-
-</body>
+	<head>
+	<title>ewoxej</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>
+		function resetStyles()
+			{
+			var tabs = document.getElementsByClassName("tab");
+			var articles = document.getElementsByTagName("article");
+			for(var i=0;i<tabs.length;i++)
+				{
+				tabs[i].style.color="white";
+				tabs[i].style.background="#3d2d5d";
+				tabs[i].style.border="0";
+				}
+			for(var i=0;i<articles.length;i++)
+				{
+				articles[i].style.display="none";
+				}	
+			}
+			
+		function tabclicked(number)
+			{
+			resetStyles();
+			document.getElementById("ar"+number).style.display="block";
+			document.getElementById("tab"+number).style.background="white";
+			document.getElementById("tab"+number).style.color="#3d2d5d";
+			}
+		</script>
+	</head>
+	<body>
+		<div >
+			<div id="tab_bar">
+			<a style="border: 1px solid white; padding: 10px">EWOXEJ</a>
+				<a class ="tab" id="tab1" onclick="tabclicked(1);">Main</a>
+				<a class="tab" id="tab2" onclick="tabclicked(2);">Labs</a>
+				<a class="tab" id="tab3" onclick="tabclicked(3);">Third</a>
+			</div>
+			<article id="ar1">
+				<br>
+				<b>Свяжитесь со мной:</b>
+				<a href="http://t.me/ewoxej">@ewoxej</a>
+			</article>
+			<article id="ar2">
+				<br>
+				<a href="pages/spz.html">Spz kursach</a>
+				<br>
+				<a href="lb1/lb1.html">Lab1</a>
+				<br>
+				<a href="lb2/lb2.html">Lab2</a>
+				<br>
+				<a href="lb3/lb3.html">Lab3</a>
+				<br>
+				<a href="lb4/lb4.html">Lab4</a>
+				<br>
+				<a href="lab1.html">Idz</a>
+				<br>
+			</article>
+			<article id="ar3">
+				Третья вкладка<br />
+				Здесь ничего интересного
+			</article>
+		</div>
+	</body>
 </html>
