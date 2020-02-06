@@ -15,7 +15,26 @@ input, article {
 .tab
 {
 	padding:10px;
+	font-size: 5vw;
 }
+
+#e_title
+{
+font-size: 5vw;
+}
+
+@media (min-width: 900px) 
+{
+	#e_title
+	{
+	font-size: 20pt;
+	}
+	.tab
+	{
+		font-size: 20pt;
+	}
+}
+
 
 #tab_bar
 {
@@ -55,14 +74,14 @@ input, article {
 	<body>
 		<div >
 			<div id="tab_bar">
-			<a style="border: 1px solid white; padding: 10px">EWOXEJ</a>
+			<a id = "e_title" style="border: 1px solid white; padding: 10px">EWOXEJ</a>
 				<a class ="tab" id="tab1" onclick="tabclicked(1);">Main</a>
 				<a class="tab" id="tab2" onclick="tabclicked(2);">Labs</a>
 				<a class="tab" id="tab3" onclick="tabclicked(3);">Third</a>
 			</div>
 			<article id="ar1">
 				<br>
-				<b>Свяжитесь со мной:</b>
+				<b>Contact me:</b>
 				<br>
 				<a href="http://t.me/ewoxej">
 					<img alt="Telegram" src="src/ico_telegram.png">
@@ -88,7 +107,7 @@ input, article {
 			</article>
 			<article id="ar3">
 				Третья вкладка<br />
-				Здесь ничего интересного
+				Здесь пока ничего нет
 			</article>
 		</div>
 	</body>
