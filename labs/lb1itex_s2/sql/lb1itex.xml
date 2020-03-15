@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.1
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1
+- Время создания: Мар 15 2020 г., 14:48
+- Версия сервера: 10.4.8-MariaDB
+- Версия PHP: 7.3.11
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="lb1itex" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="category">
+                CREATE TABLE `category` (
+                  `ID_Category` int(11) NOT NULL,
+                  `name` varchar(30) DEFAULT NULL,
+                  PRIMARY KEY (`ID_Category`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="items">
+                CREATE TABLE `items` (
+                  `ID_Items` int(11) NOT NULL,
+                  `name` varchar(30) NOT NULL,
+                  `price` double NOT NULL,
+                  `quantity` int(11) NOT NULL,
+                  `quality` int(11) DEFAULT NULL,
+                  `FID_Vendor` int(11) NOT NULL,
+                  `FID_Category` int(11) NOT NULL,
+                  PRIMARY KEY (`ID_Items`),
+                  KEY `FK_vendors` (`FID_Vendor`),
+                  KEY `FK_category` (`FID_Category`),
+                  CONSTRAINT `FK_category` FOREIGN KEY (`FID_Category`) REFERENCES `category` (`ID_Category`),
+                  CONSTRAINT `FK_vendors` FOREIGN KEY (`FID_Vendor`) REFERENCES `vendors` (`ID_Vendors`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="vendors">
+                CREATE TABLE `vendors` (
+                  `ID_Vendors` int(11) NOT NULL,
+                  `name` varchar(30) DEFAULT NULL,
+                  PRIMARY KEY (`ID_Vendors`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'lb1itex'
+    -->
+    <database name="lb1itex">
+        <!-- Таблица category -->
+        <table name="category">
+            <column name="ID_Category">0</column>
+            <column name="name">motherboard</column>
+        </table>
+        <table name="category">
+            <column name="ID_Category">1</column>
+            <column name="name">graphic card</column>
+        </table>
+        <table name="category">
+            <column name="ID_Category">2</column>
+            <column name="name">processor</column>
+        </table>
+        <table name="category">
+            <column name="ID_Category">3</column>
+            <column name="name">keyboard</column>
+        </table>
+        <table name="category">
+            <column name="ID_Category">4</column>
+            <column name="name">mouse</column>
+        </table>
+        <table name="category">
+            <column name="ID_Category">5</column>
+            <column name="name">display</column>
+        </table>
+        <!-- Таблица items -->
+        <table name="items">
+            <column name="ID_Items">0</column>
+            <column name="name">DX 356</column>
+            <column name="price">35.99</column>
+            <column name="quantity">5</column>
+            <column name="quality">1</column>
+            <column name="FID_Vendor">2</column>
+            <column name="FID_Category">5</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">1</column>
+            <column name="name">XV 567</column>
+            <column name="price">34.07</column>
+            <column name="quantity">2</column>
+            <column name="quality">3</column>
+            <column name="FID_Vendor">0</column>
+            <column name="FID_Category">4</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">2</column>
+            <column name="name">Hello</column>
+            <column name="price">4.5</column>
+            <column name="quantity">2</column>
+            <column name="quality">2</column>
+            <column name="FID_Vendor">6</column>
+            <column name="FID_Category">1</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">3</column>
+            <column name="name">World</column>
+            <column name="price">15.07</column>
+            <column name="quantity">10</column>
+            <column name="quality">5</column>
+            <column name="FID_Vendor">4</column>
+            <column name="FID_Category">4</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">4</column>
+            <column name="name">Core i5</column>
+            <column name="price">200</column>
+            <column name="quantity">50</column>
+            <column name="quality">1</column>
+            <column name="FID_Vendor">5</column>
+            <column name="FID_Category">2</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">5</column>
+            <column name="name">core i3</column>
+            <column name="price">150</column>
+            <column name="quantity">35</column>
+            <column name="quality">1</column>
+            <column name="FID_Vendor">5</column>
+            <column name="FID_Category">2</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">6</column>
+            <column name="name">900 GTX</column>
+            <column name="price">320</column>
+            <column name="quantity">10</column>
+            <column name="quality">1</column>
+            <column name="FID_Vendor">0</column>
+            <column name="FID_Category">1</column>
+        </table>
+        <table name="items">
+            <column name="ID_Items">7</column>
+            <column name="name">Athlon II</column>
+            <column name="price">100</column>
+            <column name="quantity">23</column>
+            <column name="quality">4</column>
+            <column name="FID_Vendor">6</column>
+            <column name="FID_Category">2</column>
+        </table>
+        <!-- Таблица vendors -->
+        <table name="vendors">
+            <column name="ID_Vendors">0</column>
+            <column name="name">Asus</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">1</column>
+            <column name="name">acer</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">2</column>
+            <column name="name">samsung</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">3</column>
+            <column name="name">LG</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">4</column>
+            <column name="name">dell</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">5</column>
+            <column name="name">intel</column>
+        </table>
+        <table name="vendors">
+            <column name="ID_Vendors">6</column>
+            <column name="name">AMD</column>
+        </table>
+    </database>
+</pma_xml_export>
