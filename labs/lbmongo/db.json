@@ -1,0 +1,9 @@
+[
+{name:"Iphone 3gS", price: NumberDecimal("100.99"), total: NumberInt(0),producer:"Apple"},
+{name:"Iphone 4S", price: NumberDecimal("200.99"), total: NumberInt(2),producer:"Apple"},
+{name:"Iphone 5s", price: NumberDecimal("100.99"), total: NumberInt(3),producer:"Apple"},
+{name:"Aspire One", price: NumberDecimal("39.40"), total: NumberInt(10)},
+{name:"Latitude E4310", price: NumberDecimal("200.05"), total: NumberInt(15),producer:"DELL",category:"Laptop",isNew:"true"},
+{name:"Pixel", price: NumberDecimal("1000.99"), total: NumberInt(100),category:"Smartphone",reviews:["Such a cool phone!","I experienced some problems with network","Too expensive"]},
+{name:"GTX 1200", price: NumberDecimal("500.99"), total: NumberInt(30),producer:"Nvdia",category:"Graphic card"}
+]
