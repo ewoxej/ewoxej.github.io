@@ -1,0 +1,19 @@
+mixin schedule_card(title,text,add_info = "")
+	div.card.p-3
+		div.card-body
+			h5.card-title 
+				i.far.fa-bell &nbsp;
+				=title
+			p.card-text= text
+			a.btn.btn-primary(href="#") Отменить
+			if add_info != ""
+				p.card-text
+					small.text-muted= add_info
+					
+h1 Планировщик
+div.card-columns
+	+schedule_card("18:00","Выключить розетку 1 на кухне")
+	+schedule_card("21:00","Изменить температуру до 21 градуса")
+	+schedule_card("22:00","Выключить свет в гостинной")
+	+schedule_card("8:00","Включить свет в гостинной","Срабатывает ежедневно")
+a.btn.btn-success.btn-lg(href="#") Добавить

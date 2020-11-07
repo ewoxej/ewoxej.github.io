@@ -1,0 +1,28 @@
+mixin lightpanel(count)
+	.btn-group.sm(role='group', data-toggle='buttons')
+		- var n= 1
+		while n < count+1
+			button.btn.btn-primary(type='button')= n++
+		
+mixin roomcard(room_img, room_name, room_items_dict, light_count, room_btn1, room_btn2, block_item )
+	.card
+		img.card-img-top(src = room_img)
+		.card-body
+			h5.card-title= room_name
+			table.table
+				tbody
+					tr
+						th(scope="row") Лампы
+						td 
+							+lightpanel(light_count)
+					each val, key in room_items_dict
+						tr
+							th(scope="row")= key
+							td= val
+					if block
+						tr
+							th(scope="row")= block_item
+							td
+								block
+			a.btn.btn-outline-secondary.mr-2(href="#")= room_btn1
+			a.btn.btn-primary(href="#" class="")= room_btn2

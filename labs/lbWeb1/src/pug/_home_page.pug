@@ -1,0 +1,14 @@
+include _roomcard.pug
+.h1 Центр управления
+div.card-columns
+	+roomcard("res/bath.jpg", "Ванная", {"Температура":"27°C","Горячая вода":"40°C"}, 1,"Розетки", "Подробнее","")
+	+roomcard("res/kitchen.jpg", "Кухня", {"Температура":"30°C"}, 2,"Розетки", "Подробнее","Внимание")
+		a.badge.badge-warning(href="#") Что-то не так с вытяжкой
+	+roomcard("res/room.jpg", "Гостинная", {"Температура":"25°C"}, 4,"Розетки", "Подробнее","Медиацентр")
+		.btn-group.sm(role='group')
+			button.btn.btn-primary(type='button') 
+				i.fas.fa-backward
+			button.btn.btn-primary(type='button') 
+				i.fas.fa-play
+			button.btn.btn-primary(type='button') 
+				i.fas.fa-forward

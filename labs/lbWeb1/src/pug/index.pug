@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+	head
+		title SmartHome
+		include _head.pug
+	body
+		include _javascript.pug
+		
+		nav.navbar.navbar-dark.bg-dark
+			a.navbar-brand( href="#home" ) 
+				i.fas.fa-microchip &nbsp;
+				.
+					SmartHome
+			ul.nav.nav-tabs.justify-content-end( id="tabs", role="tablist" )  
+				li.nav-item
+					a.nav-link.active(id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" )
+						i.fas.fa-home
+				li.nav-item
+					a.nav-link(id="security-tab" data-toggle="tab" href="#security" role="tab" aria-controls="security" aria-selected="false")
+						i.fas.fa-shield-alt
+				li.nav-item
+					a.nav-link(id="stat-tab" data-toggle="tab" href="#stat" role="tab" aria-controls="stat" aria-selected="false" )
+						i.fas.fa-chart-area
+				li.nav-item
+					a.nav-link(id="schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="schedule" aria-selected="false")
+						i.fas.fa-calendar-check
+		.page_content
+			.tab-content
+				.tab-pane.fade.show.active( id="home" role="tabpanel" aria-labelledby="home-tab" )
+					include _home_page.pug
+				.tab-pane.fade( id="security" role="tabpanel" aria-labelledby="security-tab" )
+					include _security_page.pug
+				.tab-pane.fade( id="stat" role="tabpanel" aria-labelledby="stat-tab" )
+					include _stat_page.pug
+				.tab-pane.fade( id="schedule" role="tabpanel" aria-labelledby="schedule-tab" )
+					include _schedule_page.pug

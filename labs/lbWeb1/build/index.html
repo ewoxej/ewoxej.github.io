@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SmartHome</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <nav class="navbar navbar-dark bg-dark"><a class="navbar-brand" href="#home"> <i class="fas fa-microchip">&nbsp;</i>SmartHome</a>
+      <ul class="nav nav-tabs justify-content-end" id="tabs" role="tablist"> 
+        <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-home"></i></a></li>
+        <li class="nav-item"><a class="nav-link" id="security-tab" data-toggle="tab" href="#security" role="tab" aria-controls="security" aria-selected="false"><i class="fas fa-shield-alt"></i></a></li>
+        <li class="nav-item"><a class="nav-link" id="stat-tab" data-toggle="tab" href="#stat" role="tab" aria-controls="stat" aria-selected="false"><i class="fas fa-chart-area"></i></a></li>
+        <li class="nav-item"><a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="schedule" aria-selected="false"><i class="fas fa-calendar-check"></i></a></li>
+      </ul>
+    </nav>
+    <div class="page_content">
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="h1">Центр управления</div>
+          <div class="card-columns">
+                      <div class="card"><img class="card-img-top" src="res/bath.jpg">
+                        <div class="card-body">
+                          <h5 class="card-title">Ванная</h5>
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Лампы</th>
+                                <td> 
+                                            <div class="btn-group sm" role="group" data-toggle="buttons">
+                                              <button class="btn btn-primary" type="button">1</button>
+                                            </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Температура</th>
+                                <td>27°C</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Горячая вода</th>
+                                <td>40°C</td>
+                              </tr>
+                            </tbody>
+                          </table><a class="btn btn-outline-secondary mr-2" href="#">Розетки</a><a class="btn btn-primary" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="card"><img class="card-img-top" src="res/kitchen.jpg">
+                        <div class="card-body">
+                          <h5 class="card-title">Кухня</h5>
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Лампы</th>
+                                <td> 
+                                            <div class="btn-group sm" role="group" data-toggle="buttons">
+                                              <button class="btn btn-primary" type="button">1</button>
+                                              <button class="btn btn-primary" type="button">2</button>
+                                            </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Температура</th>
+                                <td>30°C</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Внимание</th>
+                                <td><a class="badge badge-warning" href="#">Что-то не так с вытяжкой</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table><a class="btn btn-outline-secondary mr-2" href="#">Розетки</a><a class="btn btn-primary" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                      <div class="card"><img class="card-img-top" src="res/room.jpg">
+                        <div class="card-body">
+                          <h5 class="card-title">Гостинная</h5>
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Лампы</th>
+                                <td> 
+                                            <div class="btn-group sm" role="group" data-toggle="buttons">
+                                              <button class="btn btn-primary" type="button">1</button>
+                                              <button class="btn btn-primary" type="button">2</button>
+                                              <button class="btn btn-primary" type="button">3</button>
+                                              <button class="btn btn-primary" type="button">4</button>
+                                            </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Температура</th>
+                                <td>25°C</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Медиацентр</th>
+                                <td>
+                                  <div class="btn-group sm" role="group">
+                                    <button class="btn btn-primary" type="button"> <i class="fas fa-backward"></i></button>
+                                    <button class="btn btn-primary" type="button"> <i class="fas fa-play"></i></button>
+                                    <button class="btn btn-primary" type="button"> <i class="fas fa-forward"></i></button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table><a class="btn btn-outline-secondary mr-2" href="#">Розетки</a><a class="btn btn-primary" href="#">Подробнее</a>
+                        </div>
+                      </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+          <div class="h1">Безопасность</div>
+          <div class="alert alert-dismissible alert-success">
+            <button class="close" type="button" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Все хорошо</h4>
+            <p>Угроз безопасности нет.</p>
+            <hr>
+            <p class="mb-0">Не забывайте поставить дом на сигнализацию, когда будете уходить.</p>
+          </div>
+          <div class="container-fluid row">
+            <div class="col-md-4">
+              <div class="widget-small info coloured-icon"><i class="fas fa-bell fa-3x">&nbsp;</i>
+                <div class="info">
+                  <h4>Сигнализация</h4>
+                  <p><a href="#">Управление</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="widget-small primary coloured-icon"><i class="fas fa-video fa-3x"></i>
+                <div class="info">
+                  <h4>Видеонаблюдение</h4>
+                  <p><a href="#">Смотреть &nbsp;</a><a href="#">Архив</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid row">
+            <div class="col-md-4">
+              <div class="widget-small primary coloured-icon"><i class="fas fa-hand-holding-water fa-3x"></i>
+                <div class="info">
+                  <h4>Датчик утечки воды</h4>
+                  <p><b>Не обнаружено</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="widget-small warning coloured-icon"><i class="fas fa-fire fa-3x">&nbsp;</i>
+                <div class="info">
+                  <h4>Датчик задымления</h4>
+                  <p><b>Не обнаружено</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="stat" role="tabpanel" aria-labelledby="stat-tab">
+          <div class="h1">Статистика</div>
+          <div class="container-fluid row">
+            <div class="col">
+              <div class="widget-small danger coloured-icon"><i class="icon fas fa-snowflake fa-3x"></i>
+                <div class="info">
+                  <h4>За окном</h4>
+                  <p><b>-25°C</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="widget-small info coloured-icon"><i class="icon fas fa-temperature-high fas-3x"></i>
+                <div class="info">
+                  <h4>Температура</h4>
+                  <p><b>25°C</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="widget-small warning coloured-icon"><i class="icon fas fa-faucet fas-3x"></i>
+                <div class="info">
+                  <h4>Расход воды</h4>
+                  <p><b>10 кб. м.</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="widget-small primary coloured-icon"><i class="icon fas fa-bolt fas-3x"></i>
+                <div class="info">
+                  <h4>Потребление электричества</h4>
+                  <p><b>20 кВт</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid row">
+            <div class="col-md-6">
+              <div class="tile">
+                <h3 class="tile-title">График температуры за день (°C)</h3>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tile">
+                <h3 class="tile-title">Расход электричества (кВт)</h3>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            var data = {
+            labels: ["8:00", "10:00", "12:00", "15:00", "18:00","20:00","22:00"],
+            datasets: [
+            {
+            	label: "Temperature",
+            	fillColor: "#c158dc33",
+            	strokeColor: "#8e24aa",
+            	pointColor: "#5c007a",
+            	pointStrokeColor: "#fff",
+            	pointHighlightFill: "#fff",
+            	pointHighlightStroke: "rgba(220,220,220,1)",
+            	data: [23,24,25,30,22,23,22]
+            }
+            ]
+            };
+            var pdata = [
+            {
+            	value: 300,
+            	color:"#F7464A",
+            	highlight: "#FF5A5E",
+            	label: "Стиральная машина"
+            },
+            {
+            	value: 100,
+            	color: "#46BFBD",
+            	highlight: "#5AD3D1",
+            	label: "Бойлер"
+            },
+            {
+            	value: 50,
+            	color: "#FDB45C",
+            	highlight: "#FFC870",
+            	label: "Освещение"
+            },
+            {
+            	value: 20,
+            	color: "#808080",
+            	highlight: "#909090",
+            	label: "Другое"
+            }
+            ]
+            function init_graph()
+            {
+            	var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+            	var lineChart = new Chart(ctxl).Line(data);
+            
+            	var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+            	var pieChart = new Chart(ctxp).Pie(pdata);
+            }
+            
+            $("a[href='#stat']").on('shown.bs.tab', function(e) {
+            	init_graph();
+            });
+          </script>
+        </div>
+        <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+          <h1>Планировщик</h1>
+          <div class="card-columns">
+                      <div class="card p-3">
+                        <div class="card-body">
+                          <h5 class="card-title"> <i class="far fa-bell">&nbsp;</i>18:00
+                          </h5>
+                          <p class="card-text">Выключить розетку 1 на кухне</p><a class="btn btn-primary" href="#">Отменить</a>
+                        </div>
+                      </div>
+                      <div class="card p-3">
+                        <div class="card-body">
+                          <h5 class="card-title"> <i class="far fa-bell">&nbsp;</i>21:00
+                          </h5>
+                          <p class="card-text">Изменить температуру до 21 градуса</p><a class="btn btn-primary" href="#">Отменить</a>
+                        </div>
+                      </div>
+                      <div class="card p-3">
+                        <div class="card-body">
+                          <h5 class="card-title"> <i class="far fa-bell">&nbsp;</i>22:00
+                          </h5>
+                          <p class="card-text">Выключить свет в гостинной</p><a class="btn btn-primary" href="#">Отменить</a>
+                        </div>
+                      </div>
+                      <div class="card p-3">
+                        <div class="card-body">
+                          <h5 class="card-title"> <i class="far fa-bell">&nbsp;</i>8:00
+                          </h5>
+                          <p class="card-text">Включить свет в гостинной</p><a class="btn btn-primary" href="#">Отменить</a>
+                          <p class="card-text"><small class="text-muted">Срабатывает ежедневно</small></p>
+                        </div>
+                      </div>
+          </div><a class="btn btn-success btn-lg" href="#">Добавить</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
